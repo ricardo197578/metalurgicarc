@@ -4,7 +4,8 @@
   "description": "primer proyecto con Node",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js" ,
+    "start":"node index.js"
   },
   "type": "module",
   "author": "Richard Canteros",
