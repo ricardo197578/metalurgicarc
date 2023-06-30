@@ -2,12 +2,12 @@ import express from 'express';
 import { 
     paginaInicio, 
     paginaNosotros, 
-    paginaViajes, 
-    paginaTestimoniales, 
-    paginaDetalleViaje 
+    paginaTtrabajos, 
+    paginaContcto, 
+    paginaDetalleObra 
 } from '../controllers/paginasController.js';
 
-import { guardarTestimonial } from '../controllers/testimonialesController.js';
+import { guardarContacto } from '../controllers/contactosController.js';
 
 const router = express.Router();
 
@@ -15,15 +15,15 @@ router.get('/', paginaInicio);
 
 router.get('/nosotros', paginaNosotros);
 
-router.get('/viajes', paginaViajes);
+router.get('/trabajos', paginaTrabajos);
 
-router.get('/viajes/:slug', paginaDetalleViaje);
+router.get('/trabajos/:slug', paginaDetalleObra);
 
-router.get('/testimoniales', paginaTestimoniales);
+router.get('/contactos', paginaContactos);
 
 
 // Cuando Lleno el form
-router.post('/testimoniales', guardarTestimonial);
+router.post('/contactos', guardarContactos);
 
 
 export default router;

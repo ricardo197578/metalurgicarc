@@ -3,15 +3,15 @@ extends ./layout/index
 block contenido 
   main.container.mt-5
     .row
-      include ./layout/testimoniales
+      include ./layout/contactos
       .col-md-12
-        h2.text-center Agrega un Testimonial
+        h2.text-center Envianos un Mensaje
         if(errores) 
           each error in errores
             .alert.alert-danger.text-center=error.mensaje
         .row.justify-content-center
           .col-md-8
-            form(action="/testimoniales" method="post")
+            form(action="/contactos" method="post")
               .form-group
                 label(for='nombre') Nombre
                 input#nombre.form-control(type='text', placeholder='Tu Nombre', name="nombre", value=nombre)

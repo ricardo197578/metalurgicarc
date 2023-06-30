@@ -1,7 +1,7 @@
 {
-  "name": "metalurgicanode",
+  "name": "metalurgicaWeb",
   "version": "1.0.0",
-  "description": "primer proyecto con Node",
+  "description": "Web Metalurgica",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js" ,

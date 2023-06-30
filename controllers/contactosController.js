@@ -1,6 +1,6 @@
-import { Testimonial } from '../models/Testimonial.js';
+import { Contacto } from '../models/Contacto.js';
 
-const guardarTestimonial = async (req, res)  => {
+const guardarContacto = async (req, res)  => {
     const { nombre, correo, mensaje } = req.body;
 
     const errores = [];
@@ -17,28 +17,28 @@ const guardarTestimonial = async (req, res)  => {
 
     // revisar por erroes
     if(errores.length > 0 ){
-        const testimoniales = await Testimonial.findAll();
+        const contactos = await Contacto.findAll();
 
         // muestra la vista con errores
-        res.render('testimoniales', {
+        res.render('contactos', {
             errores,
             nombre, 
             correo, 
             mensaje,
             testimoniales,
-            pagina: 'Testimoniales'
+            pagina: 'Contactos'
         });
     } else {
         // almacenalo en la BD
 
         try {
-            await Testimonial.create({
+            await Contacto.create({
                 nombre, 
                 correo,
                 mensaje
             });
 
-            res.redirect('/testimoniales');
+            res.redirect('/contactos');
         } catch (error) {
             console.log(error);
         }
