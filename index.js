@@ -34,6 +34,6 @@ app.use(express.static('public'));
 
 //agregar router
 app.use('/',router);
-
 app.listen(port, ()=>{
-	console.log(`SERVIDOR OK PUERT ${port}`)
+	console.log(`SERVIDOR OK ${port}`)
+})

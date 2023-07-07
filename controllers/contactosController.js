@@ -1,6 +1,6 @@
 import { Contacto } from '../models/Contacto.js';
 
-const guardarContacto = async (req, res)  => {
+const guardarContactos = async (req, res)  => {
     const { nombre, correo, mensaje } = req.body;
 
     const errores = [];
@@ -25,7 +25,7 @@ const guardarContacto = async (req, res)  => {
             nombre, 
             correo, 
             mensaje,
-            testimoniales,
+            contactos,
             pagina: 'Contactos'
         });
     } else {
@@ -49,5 +49,5 @@ const guardarContacto = async (req, res)  => {
 
 
 export {
-    guardarTestimonial
+    guardarContactos
 }

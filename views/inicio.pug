@@ -1,8 +1,8 @@
 extends ./layout/index
 block slider 
   .slider 
-    h1 Rio de Janeiro 
-    em aventura
+        h1 
+        em
 
 block contenido 
   main.container.mt-5
@@ -13,22 +13,7 @@ block contenido
 
         p Nullam vitae ullamcorper turpis, nec dapibus lorem. Vivamus cursus quam libero, at posuere risus egestas quis. Proin at iaculis enim.
       .col-md-6
-        img(src="/img/inicio_nosotros.jpg", class="img-fluid")
+        img(src="/img/soldador_nosotros.jpg", class="img-fluid")
 
   .container
-    include ./layout/viajes
-
-  .descuento
-    .container
-      .row
-        .col-md-6
-          .contenido
-            h3 5% de Descuento
-            p.titulo Viaje a Canada
-            p.fecha 20 de Marzo 2021 - 28 De Marzo 2021
-            p.precio $2,500 USD
-
-  .container
-    h2.mt-5.text-center Testimoniales
-    .row 
-      include ./layout/testimoniales
+    include ./layout/obras

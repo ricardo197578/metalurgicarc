@@ -32,10 +32,11 @@ h3 {
     border-color: rgb(192, 7, 78);
 }
 .slider {
-    background: url(../img//superior.jpg);
+    background: url(../img//obra_dos.jpg);
     min-height: 600px;
-    height: 100vh;
+    height: 80vh;
     background-size: cover;
+    background-position:center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,7 +80,7 @@ p {
     line-height: 2;
 }
 .navegacion {
-    background-color: #15B9D5;
+    background-color: #3CB371;
 }
 header .nav a {
     font-family: 'Staatliches', cursive;
@@ -97,44 +98,6 @@ footer .nav a,
 }
 .listado-iconos img {
     height: 100px;
-}
-
-
-.descuento {
-    height: 400px;
-    background-image: linear-gradient( rgba(0, 0, 0, .5) 0%,  rgba(0, 0, 0, .5) 100%),  url(../img/cupon.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-@media (min-width:768px) {
-    .descuento {
-        height: 400px;
-        background-image:  linear-gradient(
-            to right, 
-            rgba(0, 0, 0, .5) 0%, 
-            rgba(0, 0, 0, .5) 50%, 
-            transparent 50%, 
-            transparent 100%
-        ), url(../img/cupon.jpg);
-    }
-}
-.descuento .contenido {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 400px;
-    color: white;
-}
-.descuento p {
-    font-family: 'Staatliches', cursive;
-    line-height: .8;
-}
-.descuento .titulo {
-    font-size: 2.4rem;
-}
-.descuento .precio {
-    color: #15B9D5;
-    font-size: 3rem;
 }
 
 .proximos-viajes p {

@@ -1,15 +1,15 @@
-import { Viaje } from '../models/Viajes.js';
-import { Testimonial } from '../models/Testimonial.js';
+import { Obra } from '../models/Obras.js';
+import { Contacto } from '../models/Contacto.js';
 
 const paginaInicio = async (req, res) => {
     
     const promises = [];
 
-    promises.push(Viaje.findAll({
-        limit: 3
+    promises.push(Obra.findAll({
+        limit: 2
     }));
 
-    promises.push(Testimonial.findAll({
+    promises.push(Contacto.findAll({
         limit: 3
     }));
 
@@ -21,8 +21,8 @@ const paginaInicio = async (req, res) => {
         console.log(resultado[0])
 
         res.render('inicio', {
-            viajes : resultado[0],
-            testimoniales: resultado[1],
+            obras : resultado[0],
+            contactos: resultado[1],
             clase : 'home',
             page: 'Inicio',
         })
@@ -38,23 +38,23 @@ const paginaNosotros = (req, res) => {
     });
 }
 
-const paginaViajes = async  (req, res) => { 
+const paginaObras = async  (req, res) => { 
     // Consultar BD 
-    const viajes = await Viaje.findAll();
+    const obras = await Obra.findAll();
     
-    res.render('viajes', {
-        pagina: 'Próximos Viajes', 
-        viajes,
+    res.render('obras', {
+        pagina: 'Nuestras obras', 
+        obras,
     });
 }
 
-const paginaTestimoniales =  async (req, res)  => {
+const paginaContactos =  async (req, res)  => {
      
     try {
-        const testimoniales = await Testimonial.findAll();
-        res.render('testimoniales', {
-            testimoniales,
-            page: 'Testimoniales', 
+        const contactos = await Contacto.findAll();
+        res.render('contactos', {
+            pagina: 'Contactos', 
+	    contactos	
         })
     } catch (error) {
         console.log(error);
@@ -62,27 +62,28 @@ const paginaTestimoniales =  async (req, res)  => {
 }
 
 // Muestra un viaje por su slug
-const paginaDetalleViaje = async (req, res) => {
+const paginaDetalleObra = async (req, res) => {
 
-    const { slug } = req.params;
+   const { slug } = req.params;
 
     try {
-        const viaje = await Viaje.findOne( { where : { slug } });
+        const obra = await Obra.findOne( { where : { slug } });
 
-        res.render('viaje', {
-//router.get('/viajes/:slug', paginaDetalleViaje);    
-		pagina: 'Información Viaje', 
-            viaje
-        })
+        res.render('obra', {
+  
+		pagina: 'Detalle obra', 
+                obra
+    })
     } catch (error) {
-        console.log(error);
+   console.log(error);
     }
+//	console.log(req.params);
 }
 
 export {
     paginaInicio, 
     paginaNosotros,
-    paginaViajes, 
-    paginaTestimoniales,
-    paginaDetalleViaje
+    paginaObras, 
+    paginaContactos,
+    paginaDetalleObra
 }

@@ -4,7 +4,7 @@ export const Obra = db.define('obras_realizadas',{
 	titulo:{
 		type:Sequelize.STRING
 	},
-	fecha:{
+	fecha_ejecucion:{
                 type:Sequelize
 .STRING
         },
@@ -15,7 +15,7 @@ export const Obra = db.define('obras_realizadas',{
 	descripcion:{
                 type:Sequelize
 .STRING
-        ,
+	},
 	slug:{
                 type:Sequelize
 .STRING

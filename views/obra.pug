@@ -4,7 +4,7 @@ block contenido
     main.container.mt-5
         .row
             .col-md-5
-                img(src=`/img/obra_${obra.imagen}_ln.jpg`, alt="imagen viaje", class="img-fluid")
+                img(src=`/img/obra_${obra.imagen}.jpg`, alt="imagen viaje", class="img-fluid")
             .col-md-7
                 h1 #{obra.titulo}
                 p 
@@ -18,4 +18,4 @@ block contenido
 
                     | #{obra.fecha_ejecucion} 
 
-                p= viaje.descripcion
+                p= obra.descripcion

@@ -1,4 +1,4 @@
-h2.text-center.mb-5 Próximos Viajes
+h2.text-center.mb-5 Nuestras Obras
 .row.proximos-viajes
   each obra in obras
     div.col-md-6.col-lg-4.mb-4
@@ -19,4 +19,4 @@ h2.text-center.mb-5 Próximos Viajes
           p 
 
           p= obra.descripcion.substr(0, 100)
-          a(href=`trabajos/${obra.slug}`, class="btn btn-success btn-block") Más Información
+          a(href=`obras/${obra.slug}`, class="btn btn-success btn-block") Más Información

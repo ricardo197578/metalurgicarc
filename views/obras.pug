@@ -8,7 +8,7 @@ block contenido
             each obra in obras
                 .col-md-6.col-lg-4.mb-4
                     .card
-                        img.card-img-top(src=`img/obra_${viaje.imagen}.jpg`)
+                        img.card-img-top(src=`img/obra_${obra.imagen}.jpg`)
                         .card-body
                             h2= obra.titulo
                             p 
@@ -24,4 +24,4 @@ block contenido
 
                             p= obra.descripcion.substr(0, 100) + '...'
 
-                            a(href=`trabajos/${obra.slug}`, class="btn btn-success btn-block") Más Información
+                            a(href=`obras/${obra.slug}`, class="btn btn-success btn-block") Más Información
