@@ -6,7 +6,7 @@ const paginaInicio = async (req, res) => {
     const promises = [];
 
     promises.push(Obra.findAll({
-        limit: 2
+        limit: 3
     }));
 
     promises.push(Contacto.findAll({
