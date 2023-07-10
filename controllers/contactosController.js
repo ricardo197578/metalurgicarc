@@ -32,7 +32,7 @@ const guardarContactos = async (req, res)  => {
         // almacenalo en la BD
 
         try {
-            await contactos.create({
+            await Contacto.create({
                 nombre, 
                 correo,
                 mensaje
